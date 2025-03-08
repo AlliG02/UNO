@@ -1,7 +1,10 @@
 package com.uno.core.models;
 
+import com.uno.action.PlayerAction;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.concurrent.Future;
 
 public class HumanPlayer extends Player{
 
@@ -12,6 +15,9 @@ public class HumanPlayer extends Player{
         hand.fillHand();
         scanner = new Scanner(System.in);
     }
+
+    @Override
+    public final PlayerAction awaitAction() { return null; } //TODO: implement me
 
     @Override
     public void takeTurn(Game game) {

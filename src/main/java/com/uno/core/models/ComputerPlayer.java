@@ -1,5 +1,7 @@
 package com.uno.core.models;
 
+import com.uno.action.PlayerAction;
+
 import java.util.Random;
 
 public class ComputerPlayer extends Player {
@@ -11,6 +13,9 @@ public class ComputerPlayer extends Player {
         hand.fillHand();
         random = new Random();
     }
+
+    @Override
+    public final PlayerAction awaitAction() { return null; } //TODO: implement me
 
     @Override
     public void takeTurn(Game game){

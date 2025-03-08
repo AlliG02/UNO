@@ -2,7 +2,7 @@ package com.uno.core.models;
 
 import java.util.Random;
 
-class Card {
+public class Card {
     private static final Colour[] COLOURS = {Colour.RED, Colour.GREEN, Colour.BLUE, Colour.YELLOW};
     private char[][] grid;
     private Random random;

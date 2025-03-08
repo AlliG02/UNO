@@ -1,5 +1,8 @@
 package com.uno.core.models;
+import com.uno.action.PlayerAction;
+
 import java.util.Scanner;
+import java.util.concurrent.Future;
 
 public abstract class Player {
     protected Deck deck;
@@ -15,6 +18,8 @@ public abstract class Player {
         this.hand = new Hand(sharedDeck);
     }
 
+    public abstract PlayerAction awaitAction();
+    public boolean hasWon() { return hand.getHandSize() == 0; }
     public abstract void takeTurn(Game game);
 
     protected void pickupCard() {
